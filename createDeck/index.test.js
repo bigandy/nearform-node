@@ -1,4 +1,4 @@
-import { createDeck } from "./createDeck";
+import { createDeck } from ".";
 
 test("Deck length should be 52 cards", () => {
   const deck = createDeck();
