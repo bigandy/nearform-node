@@ -1,19 +1,18 @@
-import { createDeck } from "./createDeck/index.js";
-import { randomiseArray } from "./randomiseArray";
-import { calculatePoints } from "./calculatePoints";
-import { dealCards } from "./dealCards";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var createDeck_1 = require("./createDeck");
+var randomiseArray_1 = require("./randomiseArray");
+var calculatePoints_1 = require("./calculatePoints");
+var dealCards_1 = require("./dealCards");
 // 1. create the deck ✅
-const deck = createDeck();
-console.log({ deck });
-
+var deck = (0, createDeck_1.createDeck)();
+console.log({ deck: deck });
 // 2. shuffle deck ✅
-const shuffledDeck = randomiseArray(deck);
-console.log({ shuffledDeck });
-
+var shuffledDeck = (0, randomiseArray_1.randomiseArray)(deck);
+console.log({ shuffledDeck: shuffledDeck });
 // 3. Deal n cards and mutate the array ✅
-const dealtCards = dealCards(deck, 3);
-console.log({ dealtCards });
-
+var dealtCards = (0, dealCards_1.dealCards)(deck, 3);
+console.log({ dealtCards: dealtCards });
 // 4. work out the number of points for a hand ✅
-const points = calculatePoints(dealCards(deck, 3));
-console.log({ points });
+var points = (0, calculatePoints_1.calculatePoints)((0, dealCards_1.dealCards)(deck, 3));
+console.log({ points: points });
